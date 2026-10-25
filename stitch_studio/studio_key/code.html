@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter,+PingFang+SC,+Noto+Sans+SC,+sans-serif:wght@100..900&family=JetBrains+Mono,+monospace:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#690005","on-tertiary-fixed":"#001a42","inverse-primary":"#006d3e","primary-fixed":"#59ffa4","on-tertiary-fixed-variant":"#004395","surface-tint":"#1ce388","surface-container-lowest":"#0b0e13","primary-fixed-dim":"#1ce388","error":"#ffb4ab","outline":"#859587","tertiary":"#cfdcff","primary":"#45f99c","inverse-surface":"#e1e2e9","surface-dim":"#101418","on-primary-container":"#005b32","on-surface":"#e1e2e9","on-primary-fixed-variant":"#00522d","on-tertiary-container":"#004ba3","surface-bright":"#36393f","on-background":"#e1e2e9","secondary-container":"#00a572","primary-container":"#00dc82","on-secondary":"#003824","on-surface-variant":"#bacbbc","secondary":"#4edea3","background":"#101418","tertiary-fixed-dim":"#adc6ff","on-primary":"#00391d","on-primary-fixed":"#00210f","surface-container":"#1d2025","surface":"#101418","secondary-fixed-dim":"#4edea3","on-tertiary":"#002e6a","on-error-container":"#ffdad6","tertiary-fixed":"#d8e2ff","secondary-fixed":"#6ffbbe","outline-variant":"#3c4a3f","surface-container-low":"#191c21","on-secondary-fixed":"#002113","inverse-on-surface":"#2e3036","on-secondary-fixed-variant":"#005236","surface-variant":"#32353a","on-secondary-container":"#00311f","surface-container-highest":"#32353a","error-container":"#93000a","surface-container-high":"#272a2f","tertiary-container":"#a4c0ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"1.5rem","space-lg":"1rem","gutter-md":"1rem","margin":"1rem","space-md":"0.75rem","gutter":"0.75rem","space-sm":"0.5rem","margin-dock":"0.5rem","space-xs":"0.25rem"},fontFamily:{"label-code":["\"JetBrains Mono, monospace\""],"body-lg":["\"Inter, PingFang SC, Noto Sans SC, sans-serif\""],"body-sm":["\"Inter, PingFang SC, Noto Sans SC, sans-serif\""],"headline-sm":["\"Inter, PingFang SC, Noto Sans SC, sans-serif\""],"headline-lg":["\"Inter, PingFang SC, Noto Sans SC, sans-serif\""],"display":["\"Inter, PingFang SC, Noto Sans SC, sans-serif\""],"body-md":["\"Inter, PingFang SC, Noto Sans SC, sans-serif\""],"label-metric":["\"JetBrains Mono, monospace\""],"headline-md":["\"Inter, PingFang SC, Noto Sans SC, sans-serif\""]},fontSize:{"label-code":["12px",{lineHeight:"16px",fontWeight:"500"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"display":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"label-metric":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"500"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-60 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Nova Studio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XXmlGCSZhfGUGRrmIQg8n4zOSqxWGcxVLvfIntuucqw5CN7T_Y8CHln6ClhfUHj9FIMfuMZhoAAIZw40yO3D55C-0_MY8YoMm7DLHT2v45CjJgq9xDHJpJ7-GkWD_ldKBZ3oR9YLajhCzvCdtN3bM3N1djco83FGrXaGpTGeHiCNJUBvBxE7EaXgJAokT4Z-X5QyoC1WfqhHlngz1cOoglT9AzYX9Qnt7q3YYoYTLFFlepwyebj2vvjQ"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Nova Studio</span><span class="px-1.5 py-0.5 rounded bg-primary-container/15 text-primary text-[10px] font-label-code font-bold leading-none uppercase">Pro</span></div><span class="font-label-metric text-label-metric text-outline tracking-wider uppercase">CREATIVE WORKBENCH</span></div></div></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="video-studio" href="#"><span class="material-symbols-outlined text-lg">movie_creation</span><span class="font-body-md text-body-md">视频生成</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-medium rounded-lg" data-path="models-and-keys" href="#"><span class="material-symbols-outlined text-lg">vpn_key</span><span class="font-body-md text-body-md">模型与 Key</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="prompt-assets" href="#"><span class="material-symbols-outlined text-lg">auto_fix_high</span><span class="font-body-md text-body-md">提示词库</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audio-studio" href="#"><span class="material-symbols-outlined text-lg">graphic_eq</span><span class="font-body-md text-body-md">音频生成</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="project-assets" href="#"><span class="material-symbols-outlined text-lg">folder_special</span><span class="font-body-md text-body-md">项目素材</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="billing-and-cost" href="#"><span class="material-symbols-outlined text-lg">receipt_long</span><span class="font-body-md text-body-md">费用中心</span></a></nav></div><div class="flex flex-col gap-space-sm px-space-sm"><div class="mx-space-xs p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-metric text-label-metric text-on-surface-variant">9/9 服务正常运行</span></div><span class="font-label-code text-label-code text-outline">18ms</span></div><button class="flex items-center justify-between px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="font-body-sm text-body-sm">折叠工作台</span><span class="material-symbols-outlined text-sm">dock_to_right</span></button></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-14 bg-surface-container-lowest/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors text-left" type="button"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-body-md text-body-md text-on-surface font-medium max-w-[200px] truncate">科幻短片《深空回响》- 镜头组 A</span><span class="material-symbols-outlined text-sm text-outline">unfold_more</span></button></div><div class="flex-1 max-w-lg mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-base text-outline pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-14 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" placeholder="搜索提示词、素材资产、执行任务或模型..." type="text"/><kbd class="absolute right-space-sm px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-code text-[10px] pointer-events-none uppercase">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container"><span class="material-symbols-outlined text-sm text-primary animate-spin">sync</span><span class="font-label-metric text-label-metric text-on-surface">2 个任务生成中</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low"><span class="font-label-metric text-label-metric text-outline">可用余额</span><span class="font-label-code text-label-code text-primary font-bold">¥ 1,428.50</span></div><div class="flex items-center gap-space-xs"><a class="p-space-xs rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors flex items-center justify-center" href="#" title="API 文档"><span class="material-symbols-outlined text-lg">terminal</span></a><a class="p-space-xs rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors flex items-center justify-center" href="#" title="帮助中心"><span class="material-symbols-outlined text-lg">help_outline</span></a></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxHwHdD2Q9eoq8kU8W0nt0y_hKtlCEkiuD9X6pHoqn-g2TXMSspRgkr-TPvUyoflppVrLe0UDAv7QEbkDRhDKmotmp1fTxlZerzGrzk-rQ6xMLjG8WQAyaHM2D0_MRn6IQbBS9__P4PMfMvH0VGZKH46TL_bwgHIcEbWl2TTaix6FdsZ5Mt4fFD4VByEYEHhXVY6Dr6y62H5IoHsB2zOIbS7hc1ewGTjTF1GdMY4nGna2GaNGivwoM"/><div class="hidden xl:flex flex-col text-left"><span class="font-body-sm text-body-sm text-on-surface font-medium leading-none">Lin</span><span class="font-label-metric text-label-metric text-outline leading-tight mt-0.5">Director</span></div><span class="material-symbols-outlined text-sm text-outline">expand_more</span></div></div></header><main class="relative pt-14 w-full px-space-lg bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Top Utility & Metric Band -->
+<section class="flex flex-col gap-space-lg mb-space-lg">
+<!-- Header Title Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-on-surface">模型与 API Key 凭证管理</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/10 text-primary font-label-code text-label-code font-bold">GATEWAY v2.4</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">多厂商统一网关接入、健康探测、余额实时监测与成本预估</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-base">refresh</span>
+<span>一键探测所有服务</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-headline-sm text-headline-sm font-semibold transition-all shadow-md shadow-primary-container/10" id="openDrawerBtn" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>绑定新厂商 Key</span>
+</button>
+</div>
+</div>
+<!-- Live Telemetry KPI Capsules -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-metric text-label-metric text-outline uppercase tracking-wider">接入服务商</span>
+<span class="material-symbols-outlined text-base text-primary">hub</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-display text-display text-on-surface font-bold">8</span>
+<span class="font-body-sm text-body-sm text-outline">家厂商</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-code text-label-code text-on-surface-variant">全球算力节点网格接入</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-metric text-label-metric text-outline uppercase tracking-wider">正常连接服务</span>
+<span class="material-symbols-outlined text-base text-primary">cloud_done</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-display text-display text-primary font-bold">7</span>
+<span class="font-body-sm text-body-sm text-outline">/ 8 节点健康</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="font-label-code text-label-code text-primary">探测平均延迟 114ms</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-metric text-label-metric text-error uppercase tracking-wider">异常告警</span>
+<span class="material-symbols-outlined text-base text-error">warning</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-display text-display text-error font-bold">1</span>
+<span class="font-body-sm text-body-sm text-error">家 (余额不足)</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="font-label-code text-label-code text-error">通义万相 < ¥15.00</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-metric text-label-metric text-outline uppercase tracking-wider">本月消耗总估算</span>
+<span class="material-symbols-outlined text-base text-tertiary">query_stats</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-sm">
+<span class="font-label-code text-headline-lg text-tertiary font-bold">¥ 3,842.20</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="font-label-code text-label-code text-on-surface-variant">环比昨日 +4.8% · 预算内</span>
+</div>
+</div>
+</div>
+<!-- Filter & Search Toolbar -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs overflow-x-auto w-full md:w-auto">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-highest text-primary font-headline-sm text-headline-sm font-medium whitespace-nowrap">全部厂商 (8)</button>
+<button class="px-space-md py-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm whitespace-nowrap">视频生成模型 (5)</button>
+<button class="px-space-md py-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm whitespace-nowrap">音频与人声 (2)</button>
+<button class="px-space-md py-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm whitespace-nowrap">多模态与 LLM (3)</button>
+</div>
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-base text-outline pointer-events-none">filter_list</span>
+<input class="w-full h-9 pl-9 pr-space-md rounded-lg bg-surface-container text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="按厂商、模型名称或 Key 别名过滤..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Provider Grid Section (Dense Cinematic Cards) -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md pb-16">
+<!-- Card 1: Kling AI (Active Highlight Selection) -->
+<div class="group rounded-xl p-space-md bg-surface-container-low transition-all relative flex flex-col justify-between shadow-md ring-1 ring-primary-container">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary font-label-code font-bold text-headline-sm">
+              KL
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">可灵 AI</span>
+<span class="font-label-metric text-label-metric text-outline truncate max-w-[130px]">主创编导组-Kling-Enterprise</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-metric text-label-metric">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+            98ms
+          </span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline truncate">sk-kling-••••7d12</span>
+<span class="text-on-surface-variant text-[10px] uppercase">cn-beijing</span>
+</div>
+<div class="flex flex-col gap-1 py-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">官方现金</span>
+<span class="font-label-code text-on-surface font-semibold">¥ 680.00</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">算力包积分</span>
+<span class="font-label-code text-primary font-bold">2,400 点</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">可用模型</span>
+<span class="text-on-surface-variant font-label-code text-label-code">Kling 1.0, 1.5, Pro</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="flex items-center justify-between text-outline font-label-metric text-label-metric">
+<span>10 分钟前同步</span>
+<span class="text-primary font-medium">配置中</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-space-xs">
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">测试</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">查询</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-primary font-body-sm text-body-sm text-center">编辑</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Runway -->
+<div class="group rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary font-label-code font-bold text-headline-sm">
+              RW
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Runway</span>
+<span class="font-label-metric text-label-metric text-outline truncate max-w-[130px]">北美海外渲染节点-Runway</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-metric text-label-metric">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            210ms
+          </span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline truncate">sk-runway-••••4a09</span>
+<span class="text-on-surface-variant text-[10px] uppercase">us-east</span>
+</div>
+<div class="flex flex-col gap-1 py-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">周期配额</span>
+<span class="font-label-code text-on-surface font-semibold">1,850 Credits</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">重置周期</span>
+<span class="font-label-code text-tertiary">8 天后月结</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">可用模型</span>
+<span class="text-on-surface-variant font-label-code text-label-code">Gen-3 Alpha, Gen-2</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="flex items-center justify-between text-outline font-label-metric text-label-metric">
+<span>25 分钟前同步</span>
+<span class="text-on-surface-variant">状态就绪</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-space-xs">
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">测试</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">充值</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">设置</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Volcengine (ByteDance) -->
+<div class="group rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary font-label-code font-bold text-headline-sm">
+              VC
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">火山引擎 (字节)</span>
+<span class="font-label-metric text-label-metric text-outline truncate max-w-[130px]">字节豆包视频渲染专线</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-metric text-label-metric">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            72ms
+          </span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline truncate">AKTP••••884b</span>
+<span class="text-on-surface-variant text-[10px] uppercase">cn-beijing-2</span>
+</div>
+<div class="flex flex-col gap-1 py-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">预付费账户</span>
+<span class="font-label-code text-on-surface font-semibold">¥ 1,230.50</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">并发数</span>
+<span class="font-label-code text-primary">5 并发信道</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">可用模型</span>
+<span class="text-on-surface-variant font-label-code text-label-code">Doubao-Video, Seaweed</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="flex items-center justify-between text-outline font-label-metric text-label-metric">
+<span>1 小时前同步</span>
+<span class="text-on-surface-variant">网关畅通</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-space-xs">
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">测试</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">账单</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">设置</button>
+</div>
+</div>
+</div>
+<!-- Card 4: MiniMax -->
+<div class="group rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-fixed font-label-code font-bold text-headline-sm">
+              MM
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">MiniMax (海螺)</span>
+<span class="font-label-metric text-label-metric text-outline truncate max-w-[130px]">MiniMax-Audio-Video</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-metric text-label-metric">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            86ms
+          </span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline truncate">eyJhbG••••210x</span>
+<span class="text-on-surface-variant text-[10px] uppercase">cn-shanghai</span>
+</div>
+<div class="flex flex-col gap-1 py-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">Token 配额</span>
+<span class="font-label-code text-on-surface font-semibold">8.4M Tokens</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">查询模式</span>
+<span class="font-label-code text-on-surface-variant">官方 API 直拉</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">可用模型</span>
+<span class="text-on-surface-variant font-label-code text-label-code">abab-video, T2A-HD</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="flex items-center justify-between text-outline font-label-metric text-label-metric">
+<span>刚刚同步</span>
+<span class="text-on-surface-variant">正常挂载</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-space-xs">
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">测试</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">额度</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">设置</button>
+</div>
+</div>
+</div>
+<!-- Card 5: ElevenLabs -->
+<div class="group rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary font-label-code font-bold text-headline-sm">
+              11
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">ElevenLabs</span>
+<span class="font-label-metric text-label-metric text-outline truncate max-w-[130px]">播客配音与原声重现专用</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-metric text-label-metric">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            145ms
+          </span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline truncate">eleven_••••99fe</span>
+<span class="text-on-surface-variant text-[10px] uppercase">global</span>
+</div>
+<div class="flex flex-col gap-1 py-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">月度字符</span>
+<span class="font-label-code text-on-surface font-semibold">184.2k / 250k</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden my-1">
+<div class="bg-primary h-full rounded-full" style="width: 73.6%"></div>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">可用模型</span>
+<span class="text-on-surface-variant font-label-code text-label-code">Multilingual v2, Turbo</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="flex items-center justify-between text-outline font-label-metric text-label-metric">
+<span>3 小时前同步</span>
+<span class="text-on-surface-variant">语音合成就绪</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-space-xs">
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">测试</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">配音库</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">设置</button>
+</div>
+</div>
+</div>
+<!-- Card 6: Aliyun Wanx (Warning State) -->
+<div class="group rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm ring-1 ring-error/40">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-error font-label-code font-bold text-headline-sm">
+              AL
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">阿里云百炼 / 万相</span>
+<span class="font-label-metric text-label-metric text-outline truncate max-w-[130px]">Aliyun-Wanx-Creative</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container/30 text-error font-label-metric text-label-metric">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+            余额不足
+          </span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline truncate">sk-ali-••••33bc</span>
+<span class="text-on-surface-variant text-[10px] uppercase">cn-hangzhou</span>
+</div>
+<div class="flex flex-col gap-1 py-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">可用余额</span>
+<span class="font-label-code text-error font-bold">¥ 12.40 (低额)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">告警阈值</span>
+<span class="font-label-code text-on-surface-variant">低于 ¥ 50.00</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">可用模型</span>
+<span class="text-on-surface-variant font-label-code text-label-code">Wanx 2.1 Video</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="flex items-center justify-between text-outline font-label-metric text-label-metric">
+<span>5 分钟前检测</span>
+<span class="text-error font-medium">任务排队阻塞中</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-space-xs">
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">测试</button>
+<button class="py-1 rounded bg-error/20 hover:bg-error/30 text-error font-body-sm text-body-sm text-center font-bold">充值</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">设置</button>
+</div>
+</div>
+</div>
+<!-- Card 7: Vidu -->
+<div class="group rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-fixed font-label-code font-bold text-headline-sm">
+              VD
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Vidu (生数科技)</span>
+<span class="font-label-metric text-label-metric text-outline truncate max-w-[130px]">Vidu-HighFPS-Node</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-metric text-label-metric">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            64ms
+          </span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline truncate">vidu_••••5e18</span>
+<span class="text-on-surface-variant text-[10px] uppercase">国内直连</span>
+</div>
+<div class="flex flex-col gap-1 py-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">算力包点数</span>
+<span class="font-label-code text-on-surface font-semibold">450 点</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">帧率支持</span>
+<span class="font-label-code text-primary">60fps 插帧加速</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">可用模型</span>
+<span class="text-on-surface-variant font-label-code text-label-code">Vidu 1.5 Ultra</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="flex items-center justify-between text-outline font-label-metric text-label-metric">
+<span>45 分钟前同步</span>
+<span class="text-on-surface-variant">队列畅通</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-space-xs">
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">测试</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">额度</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">设置</button>
+</div>
+</div>
+</div>
+<!-- Card 8: Google Vertex AI -->
+<div class="group rounded-xl p-space-md bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary-fixed-dim font-label-code font-bold text-headline-sm">
+              GCP
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Google Vertex AI</span>
+<span class="font-label-metric text-label-metric text-outline truncate max-w-[130px]">GCP-Veo-Lab</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-metric text-label-metric">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            180ms
+          </span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline truncate">svc-acc••••json</span>
+<span class="text-on-surface-variant text-[10px] uppercase">us-central1</span>
+</div>
+<div class="flex flex-col gap-1 py-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">凭证状态</span>
+<span class="font-label-code text-primary">已挂载 IAM Key</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">结算通道</span>
+<span class="font-label-code text-on-surface-variant">Cloud Billing</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline">可用模型</span>
+<span class="text-on-surface-variant font-label-code text-label-code">Veo 2, Imagen 3</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="flex items-center justify-between text-outline font-label-metric text-label-metric">
+<span>12 分钟前同步</span>
+<span class="text-on-surface-variant">服务授权有效</span>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-space-xs">
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">测试</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">配额</button>
+<button class="py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm text-center">设置</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Persistent Interactive Backdrop for Drawer -->
+<div class="fixed inset-0 bg-surface-container-lowest/60 backdrop-blur-sm z-50 transition-opacity duration-300" id="drawerBackdrop"></div>
+<!-- Open State Drawer: Configure API Key (Width ~460px) -->
+<aside class="fixed top-0 right-0 bottom-0 w-full max-w-[460px] bg-[#14171d] z-50 flex flex-col justify-between shadow-2xl border-l border-surface-container-highest transition-transform duration-300 translate-x-0" id="configDrawer">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">配置 API Key 凭证</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container/20 text-primary font-label-code text-[10px] font-bold">ACTIVE</span>
+</div>
+<span class="font-label-metric text-label-metric text-outline mt-0.5">正在配置: 可灵 AI (Kuaishou Kling) · 生产节点</span>
+</div>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-highest text-outline hover:text-on-surface transition-colors" id="closeDrawerBtn" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Drawer Body (Scrollable Form Fields) -->
+<div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-md">
+<!-- Vendor Selector Tabs -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-metric text-label-metric text-outline uppercase tracking-wider">切换目标服务商</label>
+<div class="grid grid-cols-4 gap-1 p-1 rounded-lg bg-surface-container-lowest">
+<button class="py-1.5 rounded text-center font-label-code text-label-code bg-surface-container-high text-primary font-semibold">可灵 Kling</button>
+<button class="py-1.5 rounded text-center font-label-code text-label-code text-outline hover:text-on-surface">Runway</button>
+<button class="py-1.5 rounded text-center font-label-code text-label-code text-outline hover:text-on-surface">火山豆包</button>
+<button class="py-1.5 rounded text-center font-label-code text-label-code text-outline hover:text-on-surface">MiniMax</button>
+</div>
+</div>
+<!-- Environment Toggle Switch -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">执行运行环境</span>
+<span class="font-label-metric text-label-metric text-outline">切换至沙箱不会扣减企业账户现金</span>
+</div>
+<div class="flex items-center gap-1 p-1 rounded-md bg-surface-container-lowest">
+<button class="px-2.5 py-1 rounded text-xs font-medium bg-primary text-on-primary">生产环境</button>
+<button class="px-2.5 py-1 rounded text-xs font-medium text-outline hover:text-on-surface">测试沙箱</button>
+</div>
+</div>
+<!-- Custom Alias Field -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-body-sm text-body-sm text-on-surface font-medium flex items-center justify-between">
+<span>账户自定义别名</span>
+<span class="font-label-metric text-label-metric text-outline">便于多团队路由与记账分摊</span>
+</label>
+<input class="w-full h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="主创编导组-Kling-Enterprise"/>
+</div>
+<!-- API Key Field with visibility toggle & copy/paste actions -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-body-sm text-body-sm text-on-surface font-medium flex items-center justify-between">
+<span>API Key / 鉴权密钥 *</span>
+<span class="text-primary font-label-metric text-label-metric">AES-256 密文存储</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 pl-space-md pr-24 rounded-lg bg-surface-container-lowest text-on-surface font-label-code text-label-code focus:outline-none focus:ring-1 focus:ring-primary tracking-wider" id="apiKeyInput" type="password" value="sk-kling-prod-994b7e1288fbc0931"/>
+<div class="absolute right-2 flex items-center gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" id="togglePasswordVisibility" title="切换显示/隐藏" type="button">
+<span class="material-symbols-outlined text-base" id="eyeIcon">visibility_off</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" id="pasteKeyBtn" title="粘贴剪贴板" type="button">
+<span class="material-symbols-outlined text-base">content_paste</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" id="copyKeyBtn" title="复制掩码" type="button">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secret Key / Access Key ID Optional for certain vendors -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-body-sm text-body-sm text-on-surface font-medium flex items-center justify-between">
+<span>Secret Key / Access Token <span class="text-outline font-normal">(可选)</span></span>
+<span class="font-label-metric text-label-metric text-outline">部分厂商签名需填</span>
+</label>
+<input class="w-full h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-label-code text-label-code focus:outline-none focus:ring-1 focus:ring-primary" placeholder="若服务商支持单一 API Key 则可置空" type="password"/>
+</div>
+<!-- Custom Base URL Field -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-body-sm text-body-sm text-on-surface font-medium flex items-center justify-between">
+<span>自定义 API Base URL</span>
+<span class="font-label-metric text-label-metric text-outline">支持代理/企业内部转发</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-code text-label-code focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="https://api.klingai.com"/>
+<span class="absolute right-3 font-label-code text-label-metric text-primary uppercase">v1 REST</span>
+</div>
+</div>
+<!-- Vendor Auto Telemetry Capability Notice Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-base">account_balance_wallet</span>
+<span class="font-headline-sm text-headline-sm font-semibold">余额监控支持能力</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+          当前配置厂商「可灵 AI」支持通过官方专用网关实时同步企业现金账户以及算力包积分。Nova Studio 将每隔 15 分钟自动巡检并在低于 ¥50 时触发企业微信/飞书 Webhook 告警。
+        </p>
+</div>
+<!-- Concurrency Throttle & Rate Limit -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">并发任务限制</span>
+<span class="font-label-code text-label-code text-primary font-bold" id="concurrencyValue">3 任务</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-lowest rounded-lg appearance-none cursor-pointer accent-primary" id="concurrencySlider" max="10" min="1" type="range" value="3"/>
+<div class="flex justify-between text-outline font-label-metric text-label-metric">
+<span>1 串行队列</span>
+<span>5 标准通道</span>
+<span>10 高通量专线</span>
+</div>
+</div>
+<!-- Live Connectivity Test Ping Feedback -->
+<div class="p-space-sm rounded-lg bg-primary-container/10 flex items-center justify-between" id="testFeedbackBox">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-primary">check_circle</span>
+<span class="font-label-code text-label-code text-primary font-medium">鉴权探测通过 · 响应 98ms · 配额可读</span>
+</div>
+<button class="text-xs text-on-surface-variant hover:text-on-surface underline" type="button">重新探测</button>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between gap-space-sm">
+<button class="flex-1 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm font-medium transition-colors flex items-center justify-center gap-1" id="testPingBtn" type="button">
+<span class="material-symbols-outlined text-base">network_check</span>
+<span>测试连通性</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2.5 rounded-lg text-outline hover:text-on-surface font-body-sm text-body-sm transition-colors" id="cancelDrawerBtn" type="button">
+          取消
+        </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-fixed-dim text-on-primary font-headline-sm text-headline-sm font-semibold transition-all shadow-md shadow-primary/20 flex items-center gap-1" id="saveAndSyncBtn" type="button">
+<span class="material-symbols-outlined text-base">sync_saved_locally</span>
+<span>保存并立即同步</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+  (function initModelKeyManagement() {
+    const configDrawer = document.getElementById('configDrawer');
+    const drawerBackdrop = document.getElementById('drawerBackdrop');
+    const openDrawerBtn = document.getElementById('openDrawerBtn');
+    const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+    const cancelDrawerBtn = document.getElementById('cancelDrawerBtn');
+    const saveAndSyncBtn = document.getElementById('saveAndSyncBtn');
+    const testPingBtn = document.getElementById('testPingBtn');
+    const testFeedbackBox = document.getElementById('testFeedbackBox');
+    const apiKeyInput = document.getElementById('apiKeyInput');
+    const togglePasswordVisibility = document.getElementById('togglePasswordVisibility');
+    const eyeIcon = document.getElementById('eyeIcon');
+    const concurrencySlider = document.getElementById('concurrencySlider');
+    const concurrencyValue = document.getElementById('concurrencyValue');
+    const copyKeyBtn = document.getElementById('copyKeyBtn');
+    const pasteKeyBtn = document.getElementById('pasteKeyBtn');
+
+    // Drawer Visibility Toggles
+    function closeDrawer() {
+      if (!configDrawer || !drawerBackdrop) return;
+      configDrawer.classList.add('translate-x-full');
+      drawerBackdrop.classList.add('opacity-0', 'pointer-events-none');
+      drawerBackdrop.classList.remove('opacity-100');
+    }
+
+    function openDrawer() {
+      if (!configDrawer || !drawerBackdrop) return;
+      configDrawer.classList.remove('translate-x-full');
+      drawerBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      drawerBackdrop.classList.add('opacity-100');
+    }
+
+    if (openDrawerBtn) openDrawerBtn.addEventListener('click', openDrawer);
+    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+    if (cancelDrawerBtn) cancelDrawerBtn.addEventListener('click', closeDrawer);
+    if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+
+    // Concurrency Scrubber
+    if (concurrencySlider && concurrencyValue) {
+      concurrencySlider.addEventListener('input', (e) => {
+        concurrencyValue.textContent = e.target.value + ' 任务';
+      });
+    }
+
+    // Key Visibility Toggle
+    if (togglePasswordVisibility && apiKeyInput && eyeIcon) {
+      togglePasswordVisibility.addEventListener('click', () => {
+        const isPassword = apiKeyInput.getAttribute('type') === 'password';
+        apiKeyInput.setAttribute('type', isPassword ? 'text' : 'password');
+        eyeIcon.textContent = isPassword ? 'visibility' : 'visibility_off';
+      });
+    }
+
+    // Ping Test Interaction
+    if (testPingBtn && testFeedbackBox) {
+      testPingBtn.addEventListener('click', () => {
+        testFeedbackBox.innerHTML = `
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-base text-primary animate-spin">refresh</span>
+            <span class="font-label-code text-label-code text-primary">正在通过边缘网关进行多径握手探测...</span>
+          </div>
+        `;
+        setTimeout(() => {
+          testFeedbackBox.innerHTML = `
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-base text-primary">check_circle</span>
+              <span class="font-label-code text-label-code text-primary font-medium">鉴权通过 · 往返延迟 92ms · 模型列表已就绪 (3/3)</span>
+            </div>
+            <span class="font-label-metric text-[10px] text-outline">HTTP 200 OK</span>
+          `;
+        }, 650);
+      });
+    }
+
+    // Save & Sync Feedback
+    if (saveAndSyncBtn) {
+      saveAndSyncBtn.addEventListener('click', () => {
+        const originalText = saveAndSyncBtn.innerHTML;
+        saveAndSyncBtn.innerHTML = `
+          <span class="material-symbols-outlined text-base animate-spin">sync</span>
+          <span>同步凭证中...</span>
+        `;
+        setTimeout(() => {
+          saveAndSyncBtn.innerHTML = `
+            <span class="material-symbols-outlined text-base">check</span>
+            <span>已保存并生效</span>
+          `;
+          setTimeout(() => {
+            saveAndSyncBtn.innerHTML = originalText;
+            closeDrawer();
+          }, 700);
+        }, 600);
+      });
+    }
+
+    // Clipboard copy mock
+    if (copyKeyBtn) {
+      copyKeyBtn.addEventListener('click', () => {
+        navigator.clipboard?.writeText(apiKeyInput.value);
+        copyKeyBtn.classList.add('text-primary');
+        setTimeout(() => copyKeyBtn.classList.remove('text-primary'), 1000);
+      });
+    }
+
+    // Clipboard paste mock
+    if (pasteKeyBtn) {
+      pasteKeyBtn.addEventListener('click', async () => {
+        try {
+          const text = await navigator.clipboard?.readText();
+          if (text) apiKeyInput.value = text;
+        } catch (err) {
+          // Fallback or permission blocked
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>

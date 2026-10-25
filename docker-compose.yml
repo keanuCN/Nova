@@ -1,0 +1,13 @@
+services:
+  studio:
+    build: .
+    init: true
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      STUDIO_DATA_DIR: /app/data
+    volumes:
+      - studio-data:/app/data
+    restart: unless-stopped
+volumes:
+  studio-data:

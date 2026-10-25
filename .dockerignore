@@ -1,0 +1,9 @@
+node_modules
+.next
+.git
+data
+work
+.env
+.env.local
+*.tsbuildinfo
+stitch_studio
